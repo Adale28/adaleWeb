@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CONTACT VIKINGS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="new.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="form.css">
+    <script src="backtop/float-panel.js"></script>
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <!--
+        **********************navigation bar********************************************************
+    -->
+    <!-- ***********************BACK TO TOP*************************************************** -->
+    <span onclick="topFunction()" id="backtop" title="Go to top">&#9650;</span>
+    <!-- ************************************************************************************* -->
+    <nav id="navbar">
+        <a id="logo" href="index.html"><i class="fa fa-home"></i>VikingOS</a>
+        <nav id="navbar-right">
+            <a href="download.html">Download</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a class="active" href="contact.html">Contact</a>
+        </nav>
+    </nav>
+
+    <header>
+        <h1 class="title">Contact Us</h1>
+    </header>
+
+    <div class="container">
+
+        <form name="myForm" class="form-inline" action="validate.html" onsubmit="return formValidation()" method="post">
+
+            <label>Name</label>
+            <div id="error-name"></div>
+            <input type="text" pattern="^([a-zA-Z0-9)$" minlength="5" maxlength="100" id="name" placeholder="Enter name" name="name">
+
+
+
+            <label>Email</label>
+            <div id="error-email"></div>
+            <input type="email" placeholder="Enter email" id="email" name="email"><br />
+
+
+            <label>Subject</label>
+            <div id="error-subject"></div>
+            <input type="text" minlength="5" maxlength="100" placeholder="Enter subject" id="subject" name="subject"><br />
+
+
+            <label>Your Message</label>
+            <div id="error-message"></div>
+            <textarea name="comment" id="message"></textarea><br />
+            <label>
+    <input type="checkbox" name="remember"> Remember me
+  </label><br />
+
+            <button class="button inline" name="submit" value="submit" type="submit">Submit</button>
+        </form>
+    </div>
+
+
+    <!--footer------------------------------------------------------------------------------------------------->
+    <footer>
+        &copy; 2019 VikingsOs All Rights Reserved.<br /> Any trademarks or logos used on this site are property of their respective owners.<br /> Terms of Service | Privacy Policy
+    </footer>
+    <!---------------------------------------------------------------------------------------------------------->
+
+</body>
+
+</html>

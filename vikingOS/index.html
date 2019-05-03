@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HOMEPAGE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="new.css">
+    <script src="script.js"></script>
+    <link href="2/ninja-slider.css" rel="stylesheet" type="text/css" />
+    <script src="2/ninja-slider.js"></script>
+    <script src="backtop/float-panel.js"></script>
+</head>
+
+<body>
+    <!--
+        ***********************navigation bar********************************************************
+    -->
+    <!-- ***********************BACK TO TOP*************************************************** -->
+    <span onclick="topFunction()" id="backtop" title="Go to top">&#9650;</span>
+    <!-- ************************************************************************************* -->
+    <nav id="navbar">
+        <a class="active" id="logo" href="index.html"><i class="fa fa-home"></i>VikingOS</a>
+        <nav id="navbar-right">
+            <a href="download.html">Download</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </nav>
+    <!--
+        *******************SLIDESHOW**********************************************************
+    -->
+    <!--start-->
+    <div id="ninja-slider">
+        <div class="slider-inner">
+            <ul>
+                <li>
+                    <a class="ns-img" href="images/Untitled-1.jpg"></a>
+                </li>
+                <li>
+                    <a class="ns-img" href="images/Untitled-2.jpg"></a>
+                </li>
+                <li>
+                    <a class="ns-img" href="images/Untitled-3.jpg"></a>
+                </li>
+            </ul>
+            <div class="navsWrapper">
+                <div id="ninja-slider-prev"></div>
+                <div id="ninja-slider-next"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--****************************end**************************************************************-->
+
+    <!--first section******************************************************************************************-->
+
+    <section>
+        <h2 class="title">Viking OS</h2>
+        <p class="ptitle"> With the Viking OS Desktop environment, it's easy to do just about anything with your computer. Viking OS Appearance lets you change the desktop to resemble the environment you're familiar with, whether it's Windows, macOS or Linux. Viking OS
+            has been designed to fit the way you use your computer, so you won't need to learn a thing to get started</p>
+    </section>
+    <section class="column">
+        <img class="container-img" src="images/laptop-png-asus.png" alt="">
+    </section>
+    <!--
+    *******************************Second section***************************************************************************
+ -->
+    <section class="column">
+
+        <h3 class="ptitle">A desktop as versatile as it's easy to use</h3>
+        With the Viking Desktop environment, it's easy to do just about anything with your computer. Viking Appearance lets you change the desktop to resemble the environment you're familiar with, whether it's Windows, macOS or Linux. Viking OS has been designed
+        to fit the way you use your computer, so you won't need to learn a thing to get started.
+
+    </section>
+
+    <!--
+        ******************************************************************************************************
+    -->
+    <!--
+    ****************Third section*********************************************************************************
+ -->
+    <section class="row">
+        <h1 class="ptitle">VIKING OS FOR BUSINESS</h1>
+        <h3 class="ptitle">Technology designed for all the ways your employees want to work.</h3>
+        <p class="ptitle"> Viking OS is the best tools for business. It help employees solve problems in creative ways, be productive wherever they are, and collaborate more effectively. Our powerful hardware and versatile platforms create a unique environment to build
+            custom apps for your company. And you can find hundreds of thousands of apps for business.</p>
+
+    </section>
+    <!--
+        **********************fourth section****************************************************************************
+
+        *********************column left    **********************************
+    -->
+    <section class="column">
+        <h1>See our system Requirements</h1>
+
+        <button class="accordion">Recommended System Specifications</button>
+        <div class="panel">
+            <p> While we don't have a strict set of minimum system requirements, we recommend at least the following specifications for the best experience:
+
+                <ul>
+                    <li> Recent Intel i3 or comparable dual-core 64-bit processor</li>
+                    <li>4 GB of system memory (RAM)</li>
+                    <li> Solid state drive (SSD) with 15 GB of free space</li>
+                    <li>Internet access</li>
+                    <li> 1024×768 display</li>
+                </ul>
+
+        </div><br />
+    </section>
+    <!--****************    column right    **********************************-->
+    <section class="column">
+        <img class="container-img" src="images/laptop_dell.jpg" alt="">
+    </section>
+    <!--******************************************************************************************************-->
+    <!--
+        **********************fifth section****************************************************************
+    -->
+    <section class="row-2">
+        <h2 class="ptitle">
+            Make your computer better
+        </h2>
+        <div class="inline">
+            <a href="download.html"><span> Download</span></a>
+        </div>
+    </section>
+    <!--******************************************************************************************************-->
+    <!--
+	**********************footer******************************************************************************
+	-->
+    <footer>
+        &copy; 2019 VikingsOs All Rights Reserved.<br /> Any trademarks or logos used on this site are property of their respective owners.<br /> Terms of Service | Privacy Policy
+    </footer>
+    <!--******************************************************************************************************-->
+    <!--
+	**************************************script for accordion*******************************************
+	-->
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("present");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

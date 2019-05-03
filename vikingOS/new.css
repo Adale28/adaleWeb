@@ -1,0 +1,664 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+
+/**************************BACK TO TOP******************************************/
+
+#backtop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: lightskyblue;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#backtop:hover {
+    background-color: #555;
+}
+
+
+/********************  NAVIGATION BAR  ***********************************************/
+
+nav#navbar {
+    overflow: hidden;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    position: sticky;
+    z-index: 99;
+    top: 0;
+}
+
+nav#navbar a {
+    float: left;
+    color: white;
+    background-color: rgba(159, 163, 162, 0.342);
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    margin: 3px;
+}
+
+nav#navbar #logo {
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.4s;
+    background-color: transparent;
+}
+
+nav#navbar a:hover {
+    background-color: white;
+    color: black;
+}
+
+nav#navbar a.active {
+    background-color: transparent;
+    color: white;
+}
+
+nav#navbar-right {
+    float: right;
+}
+
+
+/*************************************************************************************
+
+/*******    navbar stack on each other when reach 600 and lower **********/
+
+@media screen and (max-width: 600px) {
+    nav#navbar {
+        padding: 20px 10px !important;
+        position: relative;
+    }
+    nav#navbar a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    nav#navbar-right {
+        float: none;
+    }
+}
+
+
+/* HEADER*********************************************************************/
+
+header {
+    background-color: white;
+    width: 100%;
+    padding: 35px;
+}
+
+
+/**************************************************************************/
+
+
+/* NORMAL SECTION - can be use on all pages  **********************************/
+
+section {
+    float: left;
+    background-color: white;
+    width: 100%;
+    padding: 180px;
+}
+
+
+/**********************************************************************************/
+
+
+/***************FADeUP EFFECT OF SECTIONS*************************************************/
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+section,
+article,
+header,
+footer {
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+    -o-animation-name: fadeInUp;
+    -moz-animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+
+/************************************************************/
+
+
+/* SECTION ROW - can be use on all pages ********************************************/
+
+section.row {
+    float: left;
+    background-color: white;
+    color: white;
+    background-image: url('images/macbook_pro__c6uspyy0f8sy_large.jpg');
+    padding: 180px;
+}
+
+
+/*****  use at the last section of the home page and about us page  ****/
+
+section.row-2 {
+    float: left;
+    background-color: darkblue;
+    background-image: url('images/mojave__cwrl96nd8k66_large.jpg');
+    background-size: cover;
+    background-position: inherit;
+    color: white;
+    padding: 180px;
+}
+
+
+/**************************************************************************/
+
+
+/* SECTION COLUMN - USE TO CREATE COLUMNS WITH EQUAL WIDTH ***********/
+
+section.column {
+    float: left;
+    width: 50%;
+    /*background-color: antiquewhite;*/
+    padding: 23px;
+}
+
+
+/***************************************************************************/
+
+
+/*******EQUAL COLUMNS CONTENT ***************  used on about us page  *****/
+
+section.equal-height-columns {
+    color: white;
+    width: 25%;
+    padding: 0 2%;
+    background-color: transparent;
+    display: table-cell;
+}
+
+
+/***************************************************************************/
+
+
+/* ARTICLE - ***********************************/
+
+article {
+    float: left;
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+}
+
+
+/* used on download page   ****************************************************/
+
+article.column {
+    text-align: center;
+    padding: 120px;
+}
+
+
+/* used on about us page   ***************************************************/
+
+article.row {
+    background-color: midnightblue;
+    padding: 100px;
+    display: table;
+}
+
+
+/* Clear floats after the columns */
+
+article.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+main {
+    background-color: white;
+}
+
+.hm_img {
+    margin: auto;
+    width: 100%;
+    display: block;
+    border-radius: 60px;
+    /*background-color: white;*/
+}
+
+.hm_img:hover {
+    box-shadow: 0 0 1px 1px rgba(0, 140, 186, 0.5);
+}
+
+
+/* image container on home page***************************************************/
+
+.container-img {
+    margin: auto;
+    width: 100%;
+    display: block;
+    /*border-radius: 60px;*/
+    transition: transform 85ms ease-out;
+}
+
+.container-img:hover {
+    transition: 2s ease-in-out;
+    transform: scale(1.1);
+}
+
+
+/**********************************************************************/
+
+
+/*
+ aside {
+     margin-left: auto;
+     margin-right: auto;
+     float: left;
+     background-color: tan;
+     width: 30%;
+     padding: 20px;
+ }
+
+ aside.left {
+     float: left;
+     width: 50%;
+ }
+ */
+
+
+/* FOOTER ***********************************************************/
+
+footer {
+    float: left;
+    background-color: black;
+    color: wheat;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+/**********************************************************************************************************/
+
+
+/* section title   ****************************************************/
+
+.title {
+    text-align: center;
+    padding: 10px;
+    width: 50%;
+    margin: 0 auto;
+    color: grey;
+    font-size: 23px;
+}
+
+
+/* sub titles used on all pages  **************************************************************/
+
+.ptitle {
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+
+/* makes button centre ********************************************************/
+
+.inline {
+    text-align: center;
+    padding: 80px;
+}
+
+
+/******************************************************************************/
+
+
+/* span on homepage download and validate page control  ***********************************************/
+
+span {
+    width: auto;
+    padding: 25px;
+    border-radius: 50px;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 80ms ease-in-out;
+}
+
+span:active {
+    transform: scale(0.95);
+}
+
+span:focus {
+    outline: none;
+}
+
+span a {
+    text-decoration: none;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* span hover ***********************************************************/
+
+span:hover {
+    background-color: rgba(30, 143, 255, 0.363);
+    color: rgba(255, 255, 255, 0.473);
+    border: none;
+    cursor: pointer;
+}
+
+
+/*******************************************************************************/
+
+button {
+    width: auto;
+    padding: 25px;
+    border-radius: 50px;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 80ms ease-in-out;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* button hover ***********************************************************
+
+button:hover {
+    background-color: rgba(30, 143, 255, 0.363);
+    color: rgba(255, 255, 255, 0.473);
+    border: none;
+    cursor: pointer;
+}
+
+
+/************************************************************************************/
+
+@media screen and (max-width: 600px) {
+    aside,
+    article,
+    article.column,
+    footer,
+    section,
+    section.row,
+    section.column,
+    section.row-2,
+    article.row,
+    section.equal-height-columns {
+        flex-direction: column;
+        padding: 10px;
+        /* background-color: khaki;*/
+    }
+    section.row-2 {
+        background-image: linear-gradient(darkslateblue, midnightblue, midnightblue);
+        /* background-color: darkslateblue; */
+    }
+    section.equal-height-columns,
+    section.column {
+        width: auto;
+        padding: 5px;
+    }
+    section,
+    section.column {
+        padding: 40px;
+    }
+    section.row,
+    section.row-2 {
+        padding: 20px;
+    }
+}
+
+
+/****************************************************/
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media screen and (min-width: 600px) {
+    aside,
+    article,
+    article.column,
+    footer,
+    section,
+    section.row,
+    section.column,
+    section.row-2,
+    article.row,
+    section.equal-height-columns {
+        flex-direction: column;
+        padding: 5px;
+        /*background-color: khaki;*/
+    }
+    section,
+    section.column {
+        padding: 40px;
+    }
+    section.row,
+    section.row-2 {
+        padding: 40px;
+    }
+}
+
+
+/****************************************************/
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media screen and (min-width: 768px) {
+    article,
+    article.column,
+    footer,
+    section,
+    section.row,
+    section.column,
+    section.row-2,
+    article.row,
+    section.equal-height-columns {
+        /* flex-direction: column;*/
+        padding: 5px;
+        /* background-color: pink;*/
+    }
+    section.equal-height-columns,
+    article.row {
+        /* background-color: red; */
+        display: block;
+        /* width: 50%; */
+    }
+    section,
+    section.column {
+        padding: 40px;
+    }
+    section.row,
+    section.row-2 {
+        padding: 40px;
+    }
+}
+
+
+/*********************************************************/
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media screen and (min-width: 992px) {
+    aside,
+    article,
+    article.column,
+    footer,
+    section,
+    section.row,
+    section.column,
+    section.row-2,
+    article.row,
+    section.equal-height-columns {
+        flex-direction: column;
+        padding: 5px;
+        /*background-color: green;*/
+    }
+    section.equal-height.columns {
+        width: 50%;
+    }
+    section,
+    section.column {
+        padding: 40px;
+    }
+    section.row,
+    section.row-2,
+    article {
+        padding: 150px;
+    }
+}
+
+
+/*****************************************************************/
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media screen and (min-width: 1200px) {
+    aside,
+    article,
+    article.column,
+    footer,
+    section,
+    section.row,
+    section.column,
+    section.row-2,
+    article.row,
+    section.equal-height-columns {
+        flex-direction: column;
+        /*background-color: green;*/
+    }
+    section {
+        padding: 40px;
+    }
+    section.row,
+    section.row-2,
+    article {
+        padding: 150px;
+    }
+}
+
+
+/********************************   ACCORDION BUTTON   *********************************************/
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.present,
+.accordion:hover {
+    background-color: silver;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.present:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+/**************************************************************************
+ /* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    header,
+    aside {
+        flex-direction: column;
+        /* background-color: brown;*/
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    header,
+    aside {
+        width: 100%;
+        flex-direction: column;
+        /*background-color: yellow;*/
+    }
+}

@@ -1,0 +1,80 @@
+.container {
+    margin: 10px;
+    padding: 20px;
+}
+
+.form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.form-inline label {
+    margin: 5px 10px 5px 0;
+}
+
+.form-inline input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border-top: white;
+    border-bottom: 3px solid black;
+    border-left: white;
+    border-right: white;
+}
+
+.form-inline input:focus {
+    background-color: rgba(173, 216, 230, 0.274);
+}
+
+.form-inline button {
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    color: white;
+    cursor: pointer;
+}
+
+.form-inline button:hover {
+    background-color: royalblue;
+}
+
+.form-inline textarea {
+    width: 90%;
+    height: 150px;
+}
+
+
+/***********************MEDIA QUARY FOR FORM    ********************************************/
+
+@media (max-width: 800px) {
+    .form-inline input {
+        margin: 10px 0;
+    }
+    .form-inline {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media (min-width: 800px) {
+    .form-inline input {
+        margin: 10px 0;
+    }
+    .form-inline {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    button {
+        width: auto;
+    }
+}
+
+
+/*
+.error {
+    font-size: 12px;
+    border: solid red 2px;
+}*/
